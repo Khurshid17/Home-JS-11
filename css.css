@@ -40,6 +40,11 @@ a {
 .header__menu {
     display: flex;
 }
+.active {
+    position: fixed;
+    background: #fff;
+    width: 20%;
+}
 .header__menu-link, .header__logo {
     color: #EEEEEE;
     text-transform: uppercase;

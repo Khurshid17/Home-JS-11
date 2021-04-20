@@ -45,3 +45,15 @@ div.addEventListener("mouseover", function () {
     div.style.top = `${Math.random() * 80}%`
     div.style.left = `${Math.random() * 80}%`
 })
+
+class Div = {
+    constructor(options) {
+        this.div = document.querySelector(options.div); 
+        this.dir = options.direction.toUpperCase() == "X" ? "X" : "Y";
+    }   
+}
+
+let div = new Div({
+    div: ".header__div",
+    direction: "X"
+})
