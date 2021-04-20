@@ -39,17 +39,40 @@ a {
 }
 .header__menu {
     display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-top: 10px;
+    align-self: flex-start;
 }
-.active {
+.header__div.active {
+   left: 0;
+}
+.header__close {
+    border: none;
+    color: grey;
+    text-transform: uppercase;    
+    
+}
+.header__div {
     position: fixed;
     background: #fff;
-    width: 20%;
+    min-width: 200px;
+    top: 0;
+    height: 100vh;
+    left: 0;
+    transition: 0.5s;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
 }
 .header__menu-link, .header__logo {
     color: #EEEEEE;
     text-transform: uppercase;
     font-size: 18px;
     margin-right: 15px;
+}
+.header__menu-link {
+    color: grey;
 }
 .header__logo {
     margin-right: 0;

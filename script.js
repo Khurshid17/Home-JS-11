@@ -37,7 +37,7 @@ const x = new Scroll({
     top: 100,
     unit: "%"
 });
-console.dir(x.element);
+// console.dir(x.element);
 
 let div = document.querySelector('.header__content');
 
@@ -46,14 +46,34 @@ div.addEventListener("mouseover", function () {
     div.style.left = `${Math.random() * 80}%`
 })
 
-class Div = {
+class Div {
     constructor(options) {
-        this.div = document.querySelector(options.div); 
-        this.dir = options.direction.toUpperCase() == "X" ? "X" : "Y";
+        this.div = document.querySelector(options.div);
+        this.openButton = document.querySelector(options.openButton); 
+        this.closeButton = document.querySelector(options.closeButton); 
+        this.openButton.addEventListener("click", () => {
+            this.div.style.left = 0;            
+        })
+        this.closeButton.addEventListener("click", () => {
+            this.div.style.left = "-100%";
+        })
     }   
-}
+} 
 
-let div = new Div({
+/* let openButton = document.querySelector('.header__button');
+let closeButton = document.querySelector('.header__close');
+let divButton = document.querySelector('.header__div');
+
+openButton.addEventListener("click", function () {
+    divButton.style.left = 0
+})
+
+closeButton.addEventListener("click", function () {
+    divButton.style.left = "-100%"
+}) */
+
+let divButton = new Div({
     div: ".header__div",
-    direction: "X"
+    openButton: ".header__button",
+    closeButton: ".header__close"
 })
