@@ -42,8 +42,8 @@ const x = new Scroll({
 let div = document.querySelector('.header__content');
 
 div.addEventListener("mouseover", function () {
-    div.style.top = `${Math.random() * 80}%`
-    div.style.left = `${Math.random() * 80}%`
+    div.style.top = `${Math.random() * 80}%`;
+    div.style.left = `${Math.random() * 80}%`;
 })
 
 class Div {
@@ -58,7 +58,13 @@ class Div {
             this.div.style.left = "-100%";
         })
     }   
-} 
+}
+
+class New {
+    constructor(abc) {
+        this.title = document.querySelector(abc.title);
+    }
+}
 
 /* let openButton = document.querySelector('.header__button');
 let closeButton = document.querySelector('.header__close');
@@ -76,4 +82,8 @@ let divButton = new Div({
     div: ".header__div",
     openButton: ".header__button",
     closeButton: ".header__close"
+})
+
+let furniture = new New({
+    title: ".header__content h1"
 })

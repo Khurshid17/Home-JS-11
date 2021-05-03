@@ -59,7 +59,7 @@ a {
     min-width: 200px;
     top: 0;
     height: 100vh;
-    left: 0;
+    left: -100%;
     transition: 0.5s;
     display: flex;
     align-items: flex-end;
